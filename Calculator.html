@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="Calculator.js"></script>
+  <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+
+  <div class="container" style="background-color: gray;width: 30%;padding-top: 20px;">
+    <h2 style="font-weight: bold;color: white;">Calculator</h2>
+    <table class="table" style="background-color: lightgray;border-radius:0px 0px 10px 10px;font-weight: bold;" >
+      <tr>
+          <td colspan="4"><input class="form-control" type="text" id="inputfield" style="height:50px;font-size: 25px;" /></td>
+      </tr>
+      <tr>
+          <td><button class="form-control color" value="AC" onclick='document.getElementById("inputfield").value=""'>AC</button></td>
+          <td><button class="form-control color" value="C" style="background-color: red;" onclick='document.getElementById("inputfield").value=""'>C</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="%" onclick="InputValue('%')">%</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="\" onclick="InputValue('/')">\</button></td>
+          
+      </tr>
+      <tr>
+          <td><button class="form-control color" value="7" onclick="InputValue(7)">7</button></td>
+          <td><button class="form-control color" value="8" onclick="InputValue(8)">8</button></td>
+          <td><button class="form-control color" value="9" onclick="InputValue(9)">9</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="*" onclick="InputValue('*')">*</button></td>
+         
+      </tr>
+      <tr>
+          <td><button class="form-control color" value="4" onclick="InputValue(4)">4</button></td>
+          <td><button class="form-control color" value="5" onclick="InputValue(5)">5</button></td>
+          <td><button class="form-control color" value="6"onclick="InputValue(6)">6</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="-" onclick="InputValue('-')">-</button></td>
+         
+      </tr>
+      <tr>
+          <td><button class="form-control color" value="1" onclick="InputValue(1)">1</button></td>
+          <td><button class="form-control color" value="2" onclick="InputValue(2)">2</button></td>
+          <td><button class="form-control color" value="3" onclick="InputValue(3)">3</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="+" onclick="InputValue('+')">+</button></td>
+         
+      </tr>
+      <tr>
+          <td><button class="form-control color" value="00"onclick="InputValue(00)">00</button></td>
+          <td><button class="form-control color" value="0" onclick="InputValue(0)">0</button></td>
+          <td><button class="form-control color" value="." onclick="InputValue('.')">.</button></td>
+          <td><button class="form-control SpecialCharacterColor" value="=" onclick="ResultCal()">=</button></td>
+         
+      </tr>
+    </table>
+  </div>
+</body>
+<style>
+
+.color{
+    background-color: white;
+    color: black;  
+    
+}
+.SpecialCharacterColor{
+  background-color: black;
+  color: white;
+}
+</style>
+</html>
